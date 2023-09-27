@@ -1,10 +1,10 @@
 ---
-date: 2010-09-10 12:26:40
+date: 2023-09-09 23:48:10
 layout: post
-title: Birds can fly, but this you knew already
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+title: Comandos basicos de linux haking part2
+subtitle: Aprenderás detalles ocultos en comandos básicos.
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559825145/theme16_o0seet.jpg
+image: https://ticnegocios.camaravalencia.com/wp-content/uploads/2018/11/hacking-etico.jpg
 optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559825145/theme16_o0seet.jpg
 category: life
 tags:
