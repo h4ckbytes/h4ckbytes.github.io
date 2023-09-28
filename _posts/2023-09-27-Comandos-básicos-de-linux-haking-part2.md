@@ -1,5 +1,5 @@
 ---
-date: 2023-09-09 23:48:10
+date: 2022-09-09 23:48:10
 layout: post
 title: Comandos basicos de linux haking part2
 subtitle: Aprenderás detalles ocultos en comandos básicos.

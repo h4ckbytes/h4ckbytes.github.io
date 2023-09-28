@@ -1,130 +1,103 @@
 ---
-date: 2023-09-07 12:26:40
+date: 2022-09-07 12:26:40
 layout: post
-title: Comandos básicos de linux haking
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-description: Aprenderás los comandos básicos de linux y detalles de estos que no pueden ayudar en el haking.
-image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559825145/theme16_o0seet.jpg
+title: Comandos básicos de linux hacking
+subtitle: El diablo está en los detalles.
+description: Aprenderás los comandos básicos de linux y detalles de estos que nos pueden ayudar en el hacking.
+image: https://www.curvearro.com/wp-content/uploads/2019/10/Ethical-Hacking-Curvearro.jpg
 optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559825145/theme16_o0seet.jpg
-category: life
+category: linux
 tags:
-  - life
-  - tips
+  - linux
+  - Introducción
+
 author: mranderson
 ---
 
-Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+## Comando Id
 
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+Es muy sabido que hay varios usuarios a nivel de sistema y con el comando <a href="#">id</a> puedes ver a que grupo perteneces,
+ . Cuando comprometemos una maquina *linux* ver en todo momento en que grupo estamos puede ser interesante. 
+Toma encuenta que hay algun que otro grupo que puede presentar un riesgo de ESCALA DE PRIVILEGIOS o algo del estilo como grupos: docker ,kxd, root, etc.
+Uno que representa un riesgo es el comando de grupo sudo por obvias razones, el cual te permite ser admin total de todo.
 
-Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-
-## Inline HTML elements
-
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
-
-- **To bold text**, use `<strong>`.
-- *To italicize text*, use `<em>`.
-- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
-- Citations, like <cite>&mdash; Thiago Rossener</cite>, should use `<cite>`.
-- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
-- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
-
-Most of these elements are styled by browsers with few modifications on our part.
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-## Code
-
-Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
-
-```js
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
+```bash
+$ whoami
+user
+$ id
+uid=1000(username) gid=1000(username) groups=1000(username),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
 ```
 
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
 
-## Lists
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 
-* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
 
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+Cada grupo se pueden ver en una ruta del sistema que está aquí, con **cat** se puede visualizar.
+```bash
+$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+floppy:x:25:user
+```
+## Filtrar con grep
 
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
+Cuando hay tanta data lo mejor es aplicar un filtro.
+Si quieres operar sobre un output, tú puedes tipearlo, significa que el output 
+del comando anterior que has ejecutado, ahora digamos que quieres tratarlo
+ para efecturar una segunda operatoria.
+Pues hay un comando en linux que es *grep* que sirve apra aplicar filtros, seguramente lo usaras bastante.
 
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+```bash
+$ cat /etc/group | grep "floppy"
+floppy:x:11:
+```
+Lo chulo del comando "grep" es que si quisiéramos ver en que linea esta floppy lo haríamos añadiendo el parametro <a>-n</a> al final.
 
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
+```bash
+$ cat /etc/group | grep "floppy" -n
+11:floppy:x:11:
+``` 
 
-## Images
+  
+## Comandos básicos
 
-Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
+Ahora, podrán ver los comandos más básicos y más usados en linux
 
-![placeholder](https://placehold.it/800x400 "Large example image")
-![placeholder](https://placehold.it/400x200 "Medium example image")
-![placeholder](https://placehold.it/200x200 "Small example image")
+<ul>
+  <li><code>ls</code>: Listar archivos y directorios.</li>
+  <li><code>pwd</code>: Mostrar el directorio actual.</li>
+  <li><code>cd</code>: Cambiar de directorio.</li>
+  <li><code>mkdir</code>: Crear un directorio.</li>
+  <li><code>touch</code>: Crear un archivo vacío.</li>
+  <li><code>cp</code>: Copiar archivos y directorios.</li>
+  <li><code>mv</code>: Mover o renombrar archivos y directorios.</li>
+  <li><code>rm</code>: Eliminar archivos y directorios.</li>
+  <li><code>cat</code>: Mostrar el contenido de un archivo.</li>
+  <li><code>grep</code>: Buscar texto en archivos.</li>
+  <li><code>chmod</code>: Cambiar los permisos de un archivo o directorio.</li>
+  <li><code>chown</code>: Cambiar el propietario de un archivo o directorio.</li>
+  <li><code>ps</code>: Mostrar procesos en ejecución.</li>
+  <li><code>kill</code>: Terminar procesos.</li>
+  <li><code>top</code>: Ver información sobre el uso del sistema.</li>
+  <li><code>df</code>: Mostrar el espacio en disco disponible.</li>
+  <li><code>free</code>: Mostrar la memoria RAM disponible.</li>
+</ul>
 
-## Tables
 
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
-
+Espero que les haya sido de utilidad y agradezco poder aportar a la comunidad
 
 
 
