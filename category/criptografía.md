@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Work
-slug: work
+title: Criptografía
+slug: criptografía
 description: A category for work related posts.
 ---

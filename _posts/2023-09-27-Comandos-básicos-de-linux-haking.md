@@ -5,7 +5,11 @@ title: Comandos básicos de linux hacking
 subtitle: El diablo está en los detalles.
 description: Aprenderás los comandos básicos de linux y detalles de estos que nos pueden ayudar en el hacking.
 image: https://www.curvearro.com/wp-content/uploads/2019/10/Ethical-Hacking-Curvearro.jpg
-optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559825145/theme16_o0seet.jpg
+
+optimized_image: https://www.curvearro.com/wp-content/uploads/2019/10/Ethical-Hacking-Curvearro.jpg
+ 
+
+         
 category: linux
 tags:
   - linux
