@@ -1,11 +1,11 @@
 ---
-date: 2018-02-03 12:26:40
+date: 2023-10-28 12:26:40
 layout: post
-title: Asignacion de permisos
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+title: Lectura de archivos especiales Part 1
+subtitle: Visualizar y encontrar es fundamental.
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821648/theme8_knvabs.jpg
-optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821648/theme8_knvabs.jpg
+image: https://i.ibb.co/9WKHqWf/bug-linux-1.jpg
+optimized_image: https://i.ibb.co/9WKHqWf/bug-linux-1.jpg
 category: tutorial
 tags:
   - jedi
@@ -32,6 +32,8 @@ HTML defines a long list of available inline tags, a complete list of which can 
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
 
 Most of these elements are styled by browsers with few modifications on our part.
+
+
 
 # Heading 1
 
@@ -82,7 +84,7 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo r
 
 Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
 
-![placeholder](https://placehold.it/800x400 "Large example image")
+
 ![placeholder](https://placehold.it/400x200 "Medium example image")
 ![placeholder](https://placehold.it/200x200 "Small example image")
 

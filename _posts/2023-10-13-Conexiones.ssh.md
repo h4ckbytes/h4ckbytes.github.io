@@ -1,11 +1,11 @@
 ---
-date: 2015-09-06 12:00:00
+date: 2023-10-13 13:15:00
 layout: post
-title: Passion is dangerous, go for it!
-subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+title: Conexiones SSH
+subtitle: Aprenderemos a realizar conexiones ssh.
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559825288/theme17_nlndhx.jpg
-optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559825288/theme17_nlndhx.jpg
+image: https://www.hostinger.es/tutoriales/wp-content/uploads/sites/7/2017/09/ssh-tutorial-how-does-ssh-work.png
+optimized_image: https://i.ibb.co/BjM5yKX/How-does-SSH-work-1.png
 category: work
 tags:
   - work
